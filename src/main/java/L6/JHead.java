@@ -36,13 +36,13 @@ class Beer {
 
 class Generator {
     public static void main(String[] args) {
-        String[] WordListOne = {"круглосуточный", "трех-звенный", "30000-футовый", "взаимный", "обоюдный выигрыш", "фронтэнд",
-                "обоюдный", "любое ваше слово" };
+        String[] WordListOne = {"круглосуточный", "трех-звенный", "30000-футовый", "взаимный", "обоюдный выигрыш",
+                "фронтэнд", "обоюдный", "любое ваше слово" };
         String[] WordListTwo = {"уполномоченный", "трудный", "чистый продукт", "ориентированный", "центральный",
-                "распределенный", "кластеризованный", "фирменный", "нестандартный ум", "позиционированный", "сетевой", "сфокусированный",
-                "использованный с выгодой", "выровненный" };
+                "распределенный", "кластеризованный", "фирменный", "нестандартный ум", "позиционированный", "сетевой",
+                "сфокусированный", "использованный с выгодой", "выровненный" };
         String[] WordListThree = {"процесс", "пункт разгрузки", "выход из положения", "тип структуры", "талант", "подход",
-                "уровень завоеванного внимания","портал", "период времени", "обзор", "образец", "пункт следования" };
+                "уровень завоеванного внимания", "портал", "период времени", "обзор", "образец", "пункт следования" };
         int OneLength = WordListOne.length;
         int TwoLength = WordListTwo.length;
         int ThreeLength = WordListThree.length;
@@ -54,6 +54,6 @@ class Generator {
         String phaise = WordListOne[rand1] + "  " + WordListTwo[rand2] + "  " + WordListThree[rand3];
 
         System.out.println("Все что нам нужно, - это " + phaise);
-        System.out.println(WordListOne.length + "   " + WordListTwo.length + "    " + WordListThree.length );
+        System.out.println(WordListOne.length + "   " + WordListTwo.length + "    " + WordListThree.length);
     }
 }
