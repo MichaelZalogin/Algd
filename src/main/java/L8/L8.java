@@ -108,11 +108,13 @@ class HomeWorkStaticNonAccessModifier1 {
     }
 
     void ShowInfo(double r) {
-        System.out.println("радиус круга " + r + " ; Площадь круга :" + Method7(r) +" ; Длина дуги: "+ Method8(r)+" ; ");
+        System.out.println("радиус круга " + r + " ; Площадь круга :" + Method7(r) + " ; Длина дуги: " + Method8(r) + " ; ");
     }
 }
+
 class HomeWorkStaticNonAccessModifier1Test {
     public static void main(String[] args) {
+        HomeWorkStaticNonAccessModifier1.Method8(12);
         HomeWorkStaticNonAccessModifier1 NonStaticMethod = new HomeWorkStaticNonAccessModifier1();
         NonStaticMethod.ShowInfo(54);
     }
