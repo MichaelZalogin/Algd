@@ -58,7 +58,8 @@ class Student {
         Course = Course2;
         System.out.println("Armeni number: " + Count + " has been created ");
     }
-    protected final static void Method2 (){
+
+    protected final static void Method2() {
         System.out.println("total Armeni: " + Student.Count + " humans");
     }
 }
@@ -72,3 +73,48 @@ class StudentTest {
         Student.Method2();
     }
 }
+
+class HomeWorkStaticNonAccessModifier {
+    protected static int Method5(int a, int b, int c) {
+        int umnozhenie = a * b * c;
+        return umnozhenie;
+    }
+
+    protected static void Method6(int a, int b) {
+        int delenie = a / b;
+        System.out.println(delenie);
+        System.out.println(a % b);
+    }
+}
+
+class HomeWorkStaticNonAccessModifierTest {
+    public static void main(String[] args) {
+        HomeWorkStaticNonAccessModifier.Method5(1, 3, 4);
+        HomeWorkStaticNonAccessModifier.Method6(10, 3);
+    }
+}
+
+class HomeWorkStaticNonAccessModifier1 {
+    static final double pi = 3.14;
+
+    double Method7(double r) {
+        double PloshadKruga = r * r * pi;
+        return PloshadKruga;
+    }
+
+    static double Method8(double r) {
+        double DlinaoOkryzhnocti = 2 * pi * r;
+        return DlinaoOkryzhnocti;
+    }
+
+    void ShowInfo(double r) {
+        System.out.println("радиус круга " + r + " ; Площадь круга :" + Method7(r) +" ; Длина дуги: "+ Method8(r)+" ; ");
+    }
+}
+class HomeWorkStaticNonAccessModifier1Test {
+    public static void main(String[] args) {
+        HomeWorkStaticNonAccessModifier1 NonStaticMethod = new HomeWorkStaticNonAccessModifier1();
+        NonStaticMethod.ShowInfo(54);
+    }
+}
+
