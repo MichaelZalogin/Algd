@@ -73,22 +73,24 @@ class Car {
         this.engine = engine;
     }
 }
+
 class CarTest {
-    public static void door (Car c1, int a){
+    public static void door(Car c1, int a) {
         c1.count_door = a;
     }
-    public static void swap_color (Car c1, Car c2){
-        Car c3 = new Car("Blue","V3",4);
+
+    public static void swap_color(Car c1, Car c2) {
+        Car c3 = new Car("Blue", "V3", 4);
         c3.color = c1.color;
         c1.color = c2.color;
         c2.color = c3.color;
     }
 
     public static void main(String[] args) {
-        Car c1 = new Car("Red","V3",3);
-        Car c2 = new Car("Pink","V4",2);
+        Car c1 = new Car("Red", "V3", 3);
+        Car c2 = new Car("Pink", "V4", 2);
         door(c1, 6);
-        swap_color(c1,c2);
+        swap_color(c1, c2);
         System.out.println(c1.count_door);
         System.out.println(c2.color);
         System.out.println(c1.color);
