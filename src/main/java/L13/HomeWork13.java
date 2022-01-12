@@ -35,8 +35,11 @@ public class HomeWork13 { // Сравнение reference data type
     public static void main(String[] args) {
         Student st3 = new Student(1, 2, "Ivan", "Ivanov", 3.4);
         Student st4 = new Student(2, 4, "Petr", "Petrov", 3.2);
+        Student st5 = new Student(3, 5, "Fedr", "Ufimov", 3.7);
         method1(st3, st4);
         method2(st3, st4);
+        method2(st3, st5);
+        method1(st3, st4);
     }
 }
 
