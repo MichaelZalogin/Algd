@@ -120,8 +120,7 @@ class Month {
                 System.out.println("Неверный месяц");
         }
     }
-
     public static void main(String[] args) {
-        month_method(10);
+        month_method(12);
     }
 }
