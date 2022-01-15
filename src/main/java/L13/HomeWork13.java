@@ -1,6 +1,7 @@
 package L13;
 
 import L12.Student;
+import L14.Status;
 
 public class HomeWork13 { // Сравнение reference data type
 
@@ -29,14 +30,15 @@ public class HomeWork13 { // Сравнение reference data type
             }
         } else {
             System.out.println("У студентов разные имена");
+
         }
     }
 
     public static void main(String[] args) {
         Student st3 = new Student(1, 2, "Ivan", "Ivanov", 3.4);
-        Student st4 = new Student(2, 4, "Petr", "Petrov", 3.2);
-        Student st5 = new Student(3, 5, "Fedr", "Ufimov", 3.7);
-        Student st6= new Student(4, 5, "Igor", "Bins", 4.3);
+        Student st4 = new Student(2, 4, "Ivan", "Petrov", 3.2);
+        Student st5 = new Student(3, 5, "Ivan", "Ufimov", 3.7);
+        Student st6 = new Student(3, 5, "Ivan", "Ufimov", 3.7);
         method1(st3, st4);
         method2(st3, st4);
         method2(st3, st5);
@@ -55,27 +57,27 @@ class Student1 { // Сравнение if и switch selected.
     public static void main(String[] args) {
         Student1 st5 = new Student1(3);
         if (st5.grade == 2) {
-            System.out.println("Студент двоичник");
+            System.out.println(Status.BAD); // enum Status
         } else if (st5.grade == 3) {
             System.out.println("Студент троечник");
         } else if (st5.grade == 4) {
-            System.out.println("Студент хорошист]");
+            System.out.println(Status.GOOD); // enum Status
         } else if (st5.grade == 5) {
             System.out.println("Студент отличник");
         } else {
             System.out.println("Оценка не верна");
         }
-        Student1 st6 = new Student1(7);
+        Student1 st6 = new Student1(2);
 
         switch (st6.grade) {
             case 2:
-                System.out.println("Студент двоичник");
+                System.out.println(Status.BAD);  // enum Status
                 break;
             case 3:
                 System.out.println("Студент троечник");
                 break;
             case 4:
-                System.out.println("Студент хорошист");
+                System.out.println(Status.GOOD);  // enum Status
                 break;
             case 5:
                 System.out.println("Студент отличник");
@@ -122,6 +124,7 @@ class Month {
                 System.out.println("Неверный месяц");
         }
     }
+
     public static void main(String[] args) {
         month_method(12);
     }
