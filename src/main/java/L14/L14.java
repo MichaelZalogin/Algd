@@ -21,9 +21,22 @@ public class L14 {
 
 class L15 {
     public static void main(String[] args) { // Здесь работает loop с выводом четных чисел до 30
-        for (int i = 1; i<30; i++){
-            if (i%2==0)
-            System.out.println(i);
+        for (int i = 1; i < 10; i++) {
+            if (i % 2 == 0)
+                System.out.println(i);
+        }
+
+        for (int z = 1; z < 20; z++) {
+            if (z == 6) {
+                break; // обрывает loop по if
+            }
+            System.out.println("число до паузы " + z);
+        }
+        for (int z = 1; z < 10; z++) {
+            if (z>6 || z <3) {
+                continue; //реализация в обход loop
+            }
+            System.out.println("variables " + z);
         }
     }
 }
