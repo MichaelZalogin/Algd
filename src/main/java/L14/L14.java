@@ -33,7 +33,8 @@ class L15 {
             System.out.println("число до паузы " + z);
         }
         for (int z = 1; z < 10; z++) {
-            if (z>6 || z <3) {
+            if (z>8 || z <3) {
+                z+=5;
                 continue; //реализация в обход loop
             }
             System.out.println("variables " + z);
