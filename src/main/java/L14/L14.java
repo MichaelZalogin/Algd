@@ -33,11 +33,29 @@ class L15 {
             System.out.println("число до паузы " + z);
         }
         for (int z = 1; z < 10; z++) {
-            if (z>8 || z <3) {
-                z+=5;
+            if (z > 8 || z < 3) {
+                z += 5;
                 continue; //реализация в обход loop
             }
             System.out.println("variables " + z);
         }
+    }
+}
+
+class Clock {
+    protected static void time() {
+        BASIC: for (int hour = 0; hour <= 24; hour++) {
+            System.out.println("Начало аутер лупа");
+            NOT_PRIMARY:for (int minute = 0; minute <= 59; minute++) {
+
+                System.out.println(hour + " : " + minute);
+                if(minute==30){break BASIC;}
+            }
+            System.out.println("Конец интер лупа");
+        }
+    }
+    public static void main(String[] args) {
+        Clock Test = new Clock();
+        Test.time();
     }
 }
