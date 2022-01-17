@@ -7,7 +7,7 @@ public class L15DoWhile {
             System.out.println(i);
             i++;
         }
-        while (i <= 10);
+        while (i <= 9);
 
         int money = 10;
         do {
@@ -15,7 +15,7 @@ public class L15DoWhile {
             System.out.println("Вы проиграли");
             money -= 10;
         }
-        while (money > 50);// Clock loop
+        while (money > 40);// Clock loop
         int hour = 0;
         OUTER:
         do {
