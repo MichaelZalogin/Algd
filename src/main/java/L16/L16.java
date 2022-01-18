@@ -12,11 +12,16 @@ class Car {
         this.engine = engine;
     }
     final static int a = 5;
-
-    public static void main(String[] args) {
-        a = 10;
+    public Car abc (String cvet) {
+     Car c10 = new Car(cvet, "V4");
+     return c10;
     }
 }
+
 class TestCar {
-    final static Car c = new Car ("red", "V8")
+    final static Car c = new Car ("red", "V8");
+
+    public static void main(String[] args) {
+       c.color = "black";
+    }
 }
