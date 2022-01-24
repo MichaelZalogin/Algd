@@ -98,6 +98,8 @@ class Employee {
             case "Пятница":
                 System.out.println("Работа до 20:00");
                 break;
+            case "Суббота":
+            case "Воскресенье":
 
                 System.out.println("Выходной");
                 break;
