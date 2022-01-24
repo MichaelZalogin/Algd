@@ -65,7 +65,7 @@ class Student1 { // Сравнение if и switch selected.
         } else if (st5.grade == 5) {
             System.out.println("Студент отличник");
         } else {
-            System.out.println("Оценка не верна");
+            System.out.println("Введена неверная оценка");
         }
         Student1 st6 = new Student1(2);
 
