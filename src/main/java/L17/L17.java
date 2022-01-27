@@ -33,12 +33,30 @@ public class L17 {
         String s13 = s1.trim();// убирает боковые пробелы
         System.out.println(s13);
 
-        String s14 = s1.replace('f','y');// заменяет элемент
+        String s14 = s1.replace('f', 'y');// заменяет элемент
         System.out.println(s14);
 
         String s5 = "good ";
         String s6 = "afternoon";
         System.out.println(s5.concat(s6));// конкатенация
 
+    }
+}
+
+class Employee {
+    double salary;
+    boolean isManager;
+
+    Employee(double salary, boolean isManager) {
+        this.salary = salary;
+        this.isManager = isManager;
+
+    }
+}
+
+class TestEmployee {
+    public static void main(String[] args) {
+        Employee emp = new Employee(100, true);
+        System.out.println(emp.isManager + " " + emp.salary);
     }
 }
