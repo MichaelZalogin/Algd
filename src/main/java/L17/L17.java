@@ -1,11 +1,11 @@
 package L17;
 
-public class L17 {
+import java.util.SortedMap;
 
+public class L17 {
 
     public static void main(String[] args) {
         String s1 = new String("feewefffewrecewwedwe");
-
 
         System.out.println(s1.length()); //определяет длинну массива
 
@@ -21,7 +21,6 @@ public class L17 {
         System.out.println(s1.startsWith("few", 7));//возвращает булево значение не с нулевого индекса
 
         System.out.println(s1.endsWith("dwe"));//возвращает булево значение. Сравнение конца массива
-
 
         String s10 = s1.substring(3);// присваевает массив начиная с заданного индекса
         System.out.println(s10);
@@ -40,6 +39,20 @@ public class L17 {
         String s6 = "afternoon";
         System.out.println(s5.concat(s6));// конкатенация
 
+        String s15 = "R2VE32RrecfEVCX";
+        String s16 = s15.toLowerCase();
+        System.out.println(s16);// делает все символы маленькими
+
+        String s17 = s1.toUpperCase();
+        System.out.println(s17);// делает все символы большими
+
+        boolean b = s1.contains(":2");
+        System.out.println(b); // условие, содержит ли массив в себе символы
+
+
+
+
+
     }
 }
 
@@ -50,7 +63,6 @@ class Employee {
     Employee(double salary, boolean isManager) {
         this.salary = salary;
         this.isManager = isManager;
-
     }
 }
 
