@@ -36,6 +36,9 @@ public class L17 {
         String s14 = s1.replace('f','y');// заменяет элемент
         System.out.println(s14);
 
+        String s5 = "good ";
+        String s6 = "afternoon";
+        System.out.println(s5.concat(s6));// конкатенация
 
     }
 }
