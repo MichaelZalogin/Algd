@@ -30,6 +30,6 @@ class TestCar {
     final static Car c = new Car("red", "V8");
 
     public static void main(String[] args) {
-        c.color = "black";
+        c.color = "red";
     }
 }
