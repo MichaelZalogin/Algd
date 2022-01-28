@@ -1,5 +1,6 @@
 package L17;
 
+import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.SortedMap;
 
@@ -90,6 +91,10 @@ class NewTest {
             }
             System.out.print(c1);
         }
+        String s6 = new String("Hello World");
+        String s7 = new String("Hello Mister");
         System.out.println();
+        System.out.println(s6.substring(0,5).equals(s7.substring(0,5)));
+        System.out.println(s2.substring(0,5));
     }
 }
