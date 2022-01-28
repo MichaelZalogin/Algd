@@ -1,5 +1,6 @@
 package L17;
 
+import java.util.Locale;
 import java.util.SortedMap;
 
 public class L17 {
@@ -48,11 +49,6 @@ public class L17 {
 
         boolean b = s1.contains(":2");
         System.out.println(b); // условие, содержит ли массив в себе символы
-
-
-
-
-
     }
 }
 
@@ -70,5 +66,30 @@ class TestEmployee {
     public static void main(String[] args) {
         Employee emp = new Employee(100, true);
         System.out.println(emp.isManager + " " + emp.salary);
+    }
+}
+
+class NewTest {
+    public static void main(String[] args) {
+        String s1 = "Hello World";
+        String s2 = "Hello Mister";
+        String s3 = s1.concat(s2).trim().replace("llo", "ll").substring(1, 8);// method chain
+        System.out.println(s1.substring(s1.indexOf('l'), s1.indexOf('r')));
+        String s4 = "Чтоб мудро жизнь прожить, знать надобно немало, Два важных правила запомни для начала: Ты " +
+                "лучше голодай, чем что попало есть, И лучше будь один, чем вместе с кем попало.";
+        String s5 = s4.toUpperCase();
+        char c1;
+        char c2;
+        for (int i = 0; i < s4.length(); i++) {
+            c1 = s4.charAt(i);
+            c2 = s5.charAt(i);
+            if (c1 != ',' && c1 != '.' && c1 != ' ' && c1 != '.' && c1 != ':' && c1 == c2) {
+                System.out.println();
+                System.out.print(c1);
+                continue;
+            }
+            System.out.print(c1);
+        }
+        System.out.println();
     }
 }
