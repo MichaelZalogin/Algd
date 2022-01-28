@@ -100,8 +100,3 @@ class NewTest {
         System.out.println(s8.equalsIgnoreCase(s9));
     }
 }
-class HomeWorkMail {
-    static void email (String d){
-    d = "ya@yahoo@gmail.ru";
-    }
-}
