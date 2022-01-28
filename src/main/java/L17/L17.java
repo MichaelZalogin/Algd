@@ -94,7 +94,9 @@ class NewTest {
         String s6 = new String("Hello World");
         String s7 = new String("Hello Mister");
         System.out.println();
-        System.out.println(s6.substring(0,5).equals(s7.substring(0,5)));
-        System.out.println(s2.substring(0,5));
+        System.out.println(s6.substring(0, 5).equals(s7.substring(0, 5)));
+        String s8 = "AbcdefQ";
+        String s9 = "abcdefq";
+        System.out.println(s8.equalsIgnoreCase(s9));
     }
 }
