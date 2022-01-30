@@ -21,7 +21,14 @@ public class L18 {
 class Lesson18{
     public static void main(String[] args) {
         StringBuilder sb1 = new StringBuilder();
-        StringBuilder sb2 = new StringBuilder("Good Day!");
+        StringBuilder sb2 = new StringBuilder("Good Day!!!");
         StringBuilder sb3 = new StringBuilder(50);
+        StringBuilder sb4 = new StringBuilder(sb2);
+
+        System.out.println(sb2.length());
+        System.out.println(sb2.charAt(5));
+        System.out.println(sb2.indexOf("!",4));
+        System.out.println(sb2.substring(6,8));
+        System.out.println(sb2.substring(3));
     }
 }
