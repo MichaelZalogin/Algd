@@ -28,7 +28,11 @@ class Lesson18{
         System.out.println(sb2.length());
         System.out.println(sb2.charAt(5));
         System.out.println(sb2.indexOf("!",4));
-        System.out.println(sb2.substring(6,8));
         System.out.println(sb2.substring(3));
+        System.out.println(sb2.substring(5,8));
+        System.out.println(sb2.subSequence(5,8));
+        System.out.println(sb2.append(22));
+        System.out.println(sb2.append(true));
+        System.out.println(sb2.append(sb2));
     }
 }
