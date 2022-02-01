@@ -58,10 +58,6 @@ class Array2 {
                 System.out.println(array11[i][j]);
             }
         }
-        int[] array13 = new int[7];
-        int[] array14 = {1, 3, 2};
-        int[] array15;
-        array15 = new int[]{1, 3, 2, 4};
-        int[] array16 = new int[]{1, 3, 5, 7};
+
     }
 }
