@@ -36,3 +36,32 @@ public class Array {
         array6[1] = array5;
     }
 }
+
+class Array2 {
+    public static void main(String[] args) {
+        String[] array10;
+        int[][] array11;
+        array10 = new String[3];
+        array11 = new int[3][];
+        // Динамическая инициализация
+        for (int i = 0; i < array10.length; i++) {
+            array10[i] = "privet " + i;
+            System.out.println(array10[i]);
+        }
+        array11[0] = new int[5];
+        array11[1] = new int[2];
+        array11[2] = new int[7];
+
+        for (int i = 0; i < array11.length; i++) {
+            for (int j = 0; j < array11[i].length; j++) {
+                array11[i][j] = i + j;
+                System.out.println(array11[i][j]);
+            }
+        }
+        int[] array13 = new int[7];
+        int[] array14 = {1, 3, 2};
+        int[] array15;
+        array15 = new int[]{1, 3, 2, 4};
+        int[] array16 = new int[]{1, 3, 5, 7};
+    }
+}
