@@ -92,5 +92,19 @@ class Array4 {
         for (int i = 0; i < array20.length; i++) {
             System.out.println(array20[i] + " ");
         }
+        System.out.println(" ");
+        int index1 = Arrays.binarySearch(array20, 5);
+        System.out.println(index1);
+    }
+}
+
+class Array5 {
+    public static void main(String[] args) {
+        int array21[] = {1, 9, 3, -8, 0, 5, 4, 1};
+        int array22[] = {1, 9, 3, -8, 0, 5, 4, 1};
+        int array23[] = array22;
+        System.out.println(array21 == array22);// false
+        System.out.println(array22 == array23);// true
+        System.out.println(array21.equals(array22));// false
     }
 }
