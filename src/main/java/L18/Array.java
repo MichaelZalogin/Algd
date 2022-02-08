@@ -23,7 +23,8 @@ public class Array {
         array2[0][5] = "good";
         array2[1][2] = "day";
 
-
+        array3[0] = 3.14;
+        array3[2] = 3.14;
 
         array6[0][0] = 3.14;
         array6[0][1] = 3.14;
