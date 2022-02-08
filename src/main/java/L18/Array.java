@@ -10,8 +10,7 @@ public class Array {
         double[] array3;//Declaration - null
         double[][] array6;//Declaration - null
 
-        array1 = new int[5][6];// Allocation
-        array4 = new int[3][];// Allocation
+
         array2 = new String[2][6];// Allocation
         array3 = new double[3]; // Allocation
         array6 = new double[2][2];
