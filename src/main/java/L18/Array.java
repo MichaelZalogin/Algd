@@ -65,3 +65,6 @@ class Array2 {
         int[] array16 = new int[]{1, 3, 5, 7};
     }
 }
+class Array3 {
+
+}
