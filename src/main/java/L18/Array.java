@@ -76,7 +76,21 @@ class Array3 {
         array18[2] = 3;
 //        array18 [3] = 5;// Array Index Out Of Bounds Exception
         int[][] array19;
-        array19 = new int [3] [];
-        System.out.println(array19[0][1]);
+        array19 = new int[3][];
+//        System.out.println(array19[0][1]);//Null Pointer Exception
+    }
+}
+
+class Array4 {
+    public static void main(String[] args) {
+        int array20[] = {1, 9, 3, -8, 0, 5, 4, 1};
+        for (int i = 0; i < array20.length; i++) {
+            System.out.println(array20[i] + " ");
+        }
+        System.out.println(" ");
+        Arrays.sort(array20);
+        for (int i = 0; i < array20.length; i++) {
+            System.out.println(array20[i] + " ");
+        }
     }
 }
