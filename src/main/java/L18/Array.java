@@ -65,6 +65,18 @@ class Array2 {
         int[] array16 = new int[]{1, 3, 5, 7};
     }
 }
-class Array3 {
 
+class Array3 {
+    public static void main(String[] args) {
+        int[] array18;
+//        array18 = new int [-3]; // Exception in thread
+        array18 = new int[3];
+        array18[0] = 1;
+        array18[1] = 2;
+        array18[2] = 3;
+//        array18 [3] = 5;// Array Index Out Of Bounds Exception
+        int[][] array19;
+        array19 = new int [3] [];
+        System.out.println(array19[0][1]);
+    }
 }
