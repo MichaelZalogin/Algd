@@ -18,9 +18,11 @@ public class L19 {
         System.out.println(summa2);
     }
 
+    public static void abc (int [] ... array){
+    }
+
     public static void main(String[] args) {
         vararg_summa1(6, 3, 10);
         vararg_summa2(new int[]{6, 3, 10});
-
     }
 }
