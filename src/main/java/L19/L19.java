@@ -1,31 +1,26 @@
 package L19;
 
 public class L19 {
-    static void summa(int a, int b) {
-        System.out.println(a + b);
-    }
 
-    static void summa(int a, int b, int c) {
-        System.out.println(a + b + c);
-    }
-
-    static void summa(int a, int b, int c, int d) {
-        System.out.println(a + b + c);
-    }
-
-    public static void vararg_summa(int... a) {
-        int summa = 0;
+    public static void vararg_summa1(int... a) {
+        int summa1 = 0;
         for (int i = 0; i < a.length; i++) {
-            summa += a[i];
+            summa1 += a[i];
         }
-        System.out.println(summa);
+        System.out.println(summa1);
     }
 
-}
+    public static void vararg_summa2(int[] a) {
+        int summa2 = 0;
+        for (int i = 0; i < a.length; i++) {
+            summa2 += a[i];
+        }
+        System.out.println(summa2);
+    }
 
-class Programm1 {
     public static void main(String[] args) {
-        System.out.println("нулевой аргумент массива: " + args[0]);
-        System.out.println("длина массива: " + args.length);
+        vararg_summa1(6, 3, 10);
+        vararg_summa2(new int[]{6, 3, 10});
+
     }
 }
