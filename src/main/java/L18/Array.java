@@ -100,11 +100,38 @@ class Array4 {
 
 class Array5 {
     public static void main(String[] args) {
-        int array21[] = {1, 9, 3, -8, 0, 5, 4, 1};
+        int array21[] = {1, 9, 3, -8, 0, 5, 4, 1, 3, 5, 6};
         int array22[] = {1, 9, 3, -8, 0, 5, 4, 1};
         int array23[] = array22;
         System.out.println(array21 == array22);// false
         System.out.println(array22 == array23);// true
         System.out.println(array21.equals(array22));// false
+        array21[2] = 6;
+        array22[5 - 3] = 5;
+        array21[array23.length] = 66;
+        for (int i = 0; i < array21.length; i++) {
+            System.out.println(array21[i] + " ");
+        }
+    }
+}
+
+class Array6 {
+    public static void max_min(double[] array25) {
+        double max = array25[0];
+        double min = array25[0];
+        for (int i = 1; i < array25.length; i++) {
+            if (array25[i] > max) {
+                max = array25[i];
+            }
+            if (array25[i] < min) {
+                min = array25[i];
+            }
+        }
+        System.out.println("Минимальный элемент массива равен: " + max + " ,а минимальный элемент массива равен: " + min);
+    }
+
+    public static void main(String[] args) {
+        double[] array26 = {1.05, -3.14, 8.0, 9.19, -3, 0};
+        max_min(new double[]{2.5, -1.3});
     }
 }
