@@ -18,7 +18,7 @@ public class L19 {
         System.out.println(summa2);
     }
 
-    public static void abc (int [] ... array){
+    public static void abc(int[]... array) {
     }
 
     public static void main(String[] args) {
