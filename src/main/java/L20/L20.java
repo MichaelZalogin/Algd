@@ -14,6 +14,8 @@ public class L20 {
         ArrayList<String> list2 = new ArrayList<String>();
         list2.add("poka");
 //        list2.add(s1);
+        ArrayList<String> list3 = new ArrayList();
+        ArrayList<StringBuilder> list4 = new ArrayList();
     }
 }
 
