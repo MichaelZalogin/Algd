@@ -21,5 +21,6 @@ public class L162 {
         String s8 = "   privet      ";
         System.out.println(s8.stripTrailing());
         String s9 = "poka";
+        String s10 = s9.strip();
     }
 }
