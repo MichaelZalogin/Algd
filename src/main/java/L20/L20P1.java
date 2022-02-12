@@ -48,7 +48,8 @@ public class L20P1 {
         list2.remove(1);
         list2.remove(sb3);
         list2.addAll(list3);
-        list2.addAll(2,list3);
+        list2.addAll(2, list3);
+        list2.clear();
         for (StringBuilder s : list2) {
             System.out.print(s + " ");
         }
