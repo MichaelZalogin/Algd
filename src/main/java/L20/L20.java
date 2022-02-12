@@ -11,6 +11,9 @@ public class L20 {
         Student s1 = new Student();
         list1.add(s1);
         list1.add(new StringBuilder("ok"));
+        ArrayList<String> list2 = new ArrayList<String>();
+        list2.add("poka");
+//        list2.add(s1);
     }
 }
 
