@@ -1,6 +1,8 @@
 package L20;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.ListResourceBundle;
 
 public class L20 {
     public static void main(String[] args) {
@@ -16,11 +18,10 @@ public class L20 {
 //        list2.add(s1);
         ArrayList<String> list3 = new ArrayList();
         ArrayList<StringBuilder> list4 = new ArrayList();
+        List<String> list5 = new ArrayList<>();
     }
 }
-
 class Car {
 }
-
 class Student {
 }
