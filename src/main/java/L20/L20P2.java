@@ -9,9 +9,7 @@ public class L20P2 {
         s1.add("String1");
         s1.add("String2");
         s1.add("String3");
-        sb1.add(new StringBuilder("StringBuilder1"));
-        sb1.add(new StringBuilder("StringBuilder2"));
-        sb1.add(new StringBuilder("StringBuilder3"));
+
         System.out.println(sb1.indexOf(new StringBuilder("StringBuilder1")));
         System.out.println(s1.indexOf("String2"));
         System.out.println(s1.lastIndexOf("String2"));
