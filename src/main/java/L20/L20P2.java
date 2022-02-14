@@ -31,5 +31,13 @@ public class L20P2 {
         System.out.println(sb2 == sb1);
         System.out.println(sb1.get(0) == sb2.get(0));
         System.out.println(sb1.get(3).append("!!!"));
+        Object[] array1 = sb1.toArray();
+        for (Object s : array1) {
+            System.out.println(s);
+        }
+        StringBuilder[] array2 = sb1.toArray(new StringBuilder[10]);
+        for (StringBuilder sv : array2) {
+            System.out.println(sv);
+        }
     }
 }
