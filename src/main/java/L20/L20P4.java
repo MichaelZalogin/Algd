@@ -27,5 +27,9 @@ public class L20P4 {
         list3.add(sb5);
         Collections.sort(list3);
         System.out.println(list1.equals(list3));
+        Iterator <String> it = list1.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
     }
 }
