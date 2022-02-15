@@ -36,4 +36,3 @@ class MapTest {
         System.out.println("map = " + map1);
     }
 }
-
