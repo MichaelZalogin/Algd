@@ -9,8 +9,6 @@ public class L20P3 {
         StringBuilder sb1 = new StringBuilder("A");
         StringBuilder sb2 = new StringBuilder("B");
         StringBuilder sb3 = new StringBuilder("C");
-        StringBuilder sb4 = new StringBuilder("D");
-        StringBuilder sb5 = new StringBuilder("E");
         ArrayList<StringBuilder> list1 = new ArrayList<>();
         list1.add(sb1);
         list1.add(sb2);
