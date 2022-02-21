@@ -21,5 +21,12 @@ class Chelovek {
 }
 
 class TestChelovek {
+    public static void main(String[] args) {
 
+        Chelovek person1 = new Chelovek("male");
+        person1.name = "Petr";
+        person1.age = 35;
+        person1.weight = 70;
+
+    }
 }
