@@ -15,9 +15,37 @@ class Chelovek {
         this.pol = pol;
     }
 
-    String name;
-    int age;
-    int weight;
+    private String name;
+    private int age;
+    private int weight;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        }
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        if (weight > 0) {
+            this.weight = weight;
+        }
+    }
 }
 
 class TestChelovek {
@@ -27,6 +55,5 @@ class TestChelovek {
         person1.name = "Petr";
         person1.age = 35;
         person1.weight = 70;
-
     }
 }
