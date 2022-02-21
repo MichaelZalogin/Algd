@@ -14,10 +14,12 @@ class Chelovek {
     Chelovek(String pol) {
         this.pol = pol;
     }
+
     String name;
     int age;
     int weight;
 }
+
 class TestChelovek {
 
 }
