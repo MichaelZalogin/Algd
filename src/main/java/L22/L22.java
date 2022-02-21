@@ -18,6 +18,7 @@ class Chelovek {
     private String name;
     private int age;
     private int weight;
+    private boolean clever;
 
     public String getName() {
         return name;
@@ -46,14 +47,25 @@ class Chelovek {
             this.weight = weight;
         }
     }
+
+    public boolean isClever() {
+        return clever;
+    }
+
+    public void setClever(boolean clever) {
+        this.clever = clever;
+    }
 }
 
 class TestChelovek {
     public static void main(String[] args) {
 
         Chelovek person1 = new Chelovek("male");
-        person1.name = "Petr";
-        person1.age = 35;
-        person1.weight = 70;
+        person1.setName("Petr");
+        person1.setWeight(70);
+        person1.setAge(23);
+        System.out.println(person1.getName());
+        System.out.println(person1.getAge());
+        System.out.println(person1.getWeight());
     }
 }
