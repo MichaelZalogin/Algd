@@ -9,13 +9,13 @@ class Student3 {
     private double grade;
 
     public StringBuilder getName() {
-        StringBuilder name2 = new StringBuilder(this.name);
+        StringBuilder name2 = new StringBuilder(name);
         return name2;
     }
 
-    public void setName(StringBuilder n) {
-        if (name.length() > 3) {
-            this.name = name;
+    public void setName(StringBuilder name3) {
+        if (name.length() > 4) {
+            this.name = name3;
         }
     }
 
@@ -42,4 +42,13 @@ class Student3 {
     }
 }
 
+class StudentTest {
+    public static void main(String[] args) {
+        Student3 st1 = new Student3();
+        StringBuilder ss1 = new StringBuilder("Ivan");
+        st1.setCourse(3);
+        st1.setGrade(4.5);
+        st1.setName(ss1);
+    }
+}
 
