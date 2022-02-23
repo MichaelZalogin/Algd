@@ -13,9 +13,9 @@ class Student3 {
         return name2;
     }
 
-    public void setName(StringBuilder name3) {
-        if (name.length() > 4) {
-            this.name = name3;
+    public void setName(StringBuilder name) {
+        if (name.length() > 2) {
+            this.name = name;
         }
     }
 
@@ -38,7 +38,7 @@ class Student3 {
     }
 
     public void show_info() {
-        System.out.println("Имя" + getName() + " курс: " + getCourse() + " оценка: " + getGrade());
+        System.out.println("Имя " + getName() + " курс: " + getCourse() + " оценка: " + getGrade());
     }
 }
 
@@ -49,6 +49,6 @@ class StudentTest {
         st1.setCourse(3);
         st1.setGrade(4.5);
         st1.setName(ss1);
+        st1.show_info();
     }
 }
-
