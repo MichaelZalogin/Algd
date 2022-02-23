@@ -25,7 +25,7 @@ class Student3 {
 
     public void setCourse(int course) {
         if (course >= 1 && course <= 5) {
-        this.course = course;
+            this.course = course;
         }
     }
 
@@ -38,7 +38,8 @@ class Student3 {
     }
 
     public void show_info() {
-        System.out.println();
+        System.out.println("Имя" + getName() + " курс: " + getCourse() + " оценка: " + getGrade());
     }
 }
+
 
