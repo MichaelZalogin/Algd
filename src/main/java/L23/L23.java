@@ -18,3 +18,12 @@ class Employee {
         System.out.println("Спать");
     }
 }
+
+class Teacher extends Employee {
+    int amount_student;
+
+    void teach() {
+        System.out.println("Учить");
+    }
+
+}
