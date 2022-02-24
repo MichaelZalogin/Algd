@@ -6,6 +6,8 @@ public class L23 {
         t1.eat();
         Employee e1 = new Employee();
         e1.eat();
+        Employee e2 = new Teacher();
+        e2.eat();
     }
 }
 
@@ -42,6 +44,7 @@ class Teacher extends Employee {
         Apple a1 = new Apple();
         return a1;
     }
+
 
     void teach() {
         System.out.println("Учить");
