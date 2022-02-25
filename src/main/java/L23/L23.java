@@ -39,6 +39,7 @@ class Teacher extends Employee {
 
     int amount_student;
 
+    @Override
     Apple eat() {
         System.out.println("Учитель ест");
         Apple a1 = new Apple();
