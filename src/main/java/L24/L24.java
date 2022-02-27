@@ -42,5 +42,15 @@ class Rectangle extends Figure {
     }
 }
 
-abstract class Triangle extends Figure {
+class Circle extends Figure {
+    int number_of_sides = 0;
+    int radius = 8;
+
+    public void perimeter() {
+        System.out.println("Периметр окружности равен: " + 2 * 3.14 * radius);
+    }
+
+    public void area() {
+        System.out.println("Площадь окружности равна: " + 3.14 * radius * radius);
+    }
 }
