@@ -16,6 +16,7 @@ abstract class Figure {
 }
 
 class Square extends Figure {
+    int number_of_sides = 4;
     int sides = 10;
 
     public void perimeter() {
@@ -28,7 +29,18 @@ class Square extends Figure {
 }
 
 class Rectangle extends Figure {
+    int number_of_sides = 4;
+    int sides1 = 8;
+    int sides2 = 5;
+
+    public void perimeter() {
+        System.out.println("Периметр прямоугольника равен: " + 2 * (sides1 + sides2));
+    }
+
+    public void area() {
+        System.out.println("Площадь прямоугольника равна: " + sides1 * sides2);
+    }
 }
 
-class Triangle extends Figure {
+abstract class Triangle extends Figure {
 }
