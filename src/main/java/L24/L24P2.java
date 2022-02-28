@@ -1,15 +1,19 @@
 package L24;
 
-public class L24P2 {}
-    interface i1 {
-        void abc ();
-        default void def () {
-            System.out.println("DEF");
-        }
-        default void ghi () {
-            System.out.println("GHI");
-        }
+public class L24P2 {
+}
+
+interface i1 {
+    void abc();
+
+    default void def() {
+        System.out.println("DEF");
     }
+
+    static void ghi() {
+        System.out.println("Static GHI");
+    }
+}
 
 class Z2 implements i1 {
     @Override
@@ -21,7 +25,6 @@ class Z2 implements i1 {
         Z2 z = new Z2();
         z.abc();
         z.def();
-        z.ghi();
-
+        i1.ghi();
     }
 }
