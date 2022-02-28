@@ -13,6 +13,7 @@ public class Employee {
     void sleep() {
         System.out.println("Sleep");
     }
+
 }
 
 class Doctor extends Employee {
