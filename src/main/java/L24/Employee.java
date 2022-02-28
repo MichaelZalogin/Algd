@@ -21,13 +21,53 @@ class Doctor extends Employee {
     }
 }
 
-class Surgeon extends Doctor {
-    String scalpel;
+class Teacher extends Employee implements Help_able {
+    int amount_student;
 
-    void operation() {
+    void teach() {
+        System.out.println("Teach");
+    }
+
+    @Override
+    public void resuscitation() {
+        System.out.println("A");
+    }
+
+    @Override
+    public void put_out_the_fire() {
+        System.out.println("B");
     }
 }
 
-class Dentist extends Doctor {
+class Driver extends Employee implements Help_able, Swim_able {
+    String car_name;
 
+    @Override
+    public void resuscitation() {
+        System.out.println("A");
+    }
+
+    @Override
+    public void put_out_the_fire() {
+        System.out.println("B");
+    }
+
+    @Override
+    public void swim() {
+        System.out.println("C");
+    }
+
+    void drive() {
+        System.out.println("Drive");
+    }
+}
+
+interface Help_able {
+    void resuscitation();
+
+    void put_out_the_fire();
+}
+
+interface Swim_able {
+    void swim();
 }
