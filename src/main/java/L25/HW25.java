@@ -78,3 +78,31 @@ class Mechenosec extends Fish {
         System.out.println("Bistro plavaet");
     }
 }
+
+class Penguin extends Bird {
+
+    public Penguin(String name) {
+        super(name);
+        this.name = name;
+    }
+
+    @Override
+    void eat() {
+        System.out.println("The penguin eats");
+    }
+
+    @Override
+    void sleep() {
+        System.out.println("The penguin sleeps");
+    }
+
+    @Override
+    void fly() {
+        System.out.println("The penguin doesn't fly");
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("The penguin speaks");
+    }
+}
