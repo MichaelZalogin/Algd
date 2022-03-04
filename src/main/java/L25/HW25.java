@@ -1,6 +1,24 @@
 package L25;
 
 public class HW25 {
+    public static void main(String[] args) {
+        Mechenosec m1 = new Mechenosec("Karl");
+        System.out.println(m1.name);
+        m1.eat();
+        m1.swim();
+        m1.sleep();
+        Speakable s1 = new Penguin("Kovalsky");
+        s1.speak();
+        Animal a1 = new Lion("Lion1");
+        System.out.println(a1.name);
+        a1.eat();
+        a1.sleep();
+        Mammal mam = new Lion("Lion2");
+        System.out.println(mam.name);
+        mam.eat();
+        mam.run();
+        mam.sleep();
+    }
 }
 
 abstract class Animal {
