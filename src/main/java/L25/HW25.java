@@ -106,3 +106,31 @@ class Penguin extends Bird {
         System.out.println("The penguin speaks");
     }
 }
+
+class Lion extends Mammal {
+
+    public Lion(String name) {
+        super(name);
+        this.name = name;
+    }
+
+    @Override
+    void eat() {
+        System.out.println("The lion eats meat");
+    }
+
+    @Override
+    void sleep() {
+        System.out.println("The lion sleep");
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("The lion roars");
+    }
+
+    @Override
+    void run() {
+        System.out.println("The lion runs fast");
+    }
+}
