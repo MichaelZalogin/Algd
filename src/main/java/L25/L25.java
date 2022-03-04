@@ -16,7 +16,7 @@ class Teacher extends Employee implements Help_able {
 
     @Override
     public void help() {
-        System.out.println("Help");
+        System.out.println("Teacher helps");
     }
 
     @Override
@@ -25,31 +25,50 @@ class Teacher extends Employee implements Help_able {
     }
 }
 
-class Driver extends Employee {
+class Driver extends Employee implements Help_able {
 
     @Override
     void work() {
         System.out.println("Driver works");
     }
+
+    @Override
+    public void help() {
+        System.out.println("Driver helps");
+    }
 }
 
-class Doctor extends Employee {
+class Doctor extends Employee implements Help_able {
 
     @Override
     void work() {
         System.out.println("Doctor works");
     }
+
+    @Override
+    public void help() {
+        System.out.println("Doctor helps");
+    }
 }
 
 class Test1 {
     public static void main(String[] args) {
-        Employee epm1 = new Teacher();
-        Employee epm2 = new Driver();
-        Employee epm3 = new Doctor();
-        epm1.work();
-        epm2.work();
-        epm3.work();
+        Driver[] array1 = {new Driver(), new Driver()};
+        Employee[] array2 = {new Driver(), new Driver(), new Teacher(), new Doctor()};
+        Help_able[] array3 = {new Driver(), new Driver(), new Teacher(), new Doctor()};
+        Employee emp1 = new Teacher();
+        Employee emp2 = new Driver();
+        Employee emp3 = new Doctor();
+        emp1.work();
+        emp2.work();
+        emp3.work();
         Help_able h = new Teacher();
+        Employee[] array4 = {emp1, emp2, emp3};
+        System.out.println(emp1 instanceof Employee);
+        System.out.println(emp1 instanceof Help_able);
+        for (Employee emp : array4) {
+            emp.work();
+        }
     }
 }
 
