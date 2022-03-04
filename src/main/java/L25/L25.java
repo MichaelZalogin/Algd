@@ -12,7 +12,12 @@ abstract class Employee {
     abstract void work();
 }
 
-class Teacher extends Employee {
+class Teacher extends Employee implements Help_able {
+
+    @Override
+    public void help() {
+        System.out.println("Help");
+    }
 
     @Override
     void work() {
@@ -38,6 +43,16 @@ class Doctor extends Employee {
 
 class Test1 {
     public static void main(String[] args) {
-
+        Employee epm1 = new Teacher();
+        Employee epm2 = new Driver();
+        Employee epm3 = new Doctor();
+        epm1.work();
+        epm2.work();
+        epm3.work();
+        Help_able h = new Teacher();
     }
+}
+
+interface Help_able {
+    void help();
 }
