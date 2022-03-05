@@ -6,6 +6,14 @@ public class L25P2 {
         Employee1 e2 = new Teacher1();
         Employee1 e3 = new Driver1();
         Doctor1 d1 = (Doctor1) e1;
+        Employee1[] array1 = {e1, e2, e3};
+        Employee1 e4 = new Employee1();
+        for (Employee1 e : array1) {
+            if (e instanceof Driver1) {
+                System.out.println(((Driver1) e).car_name);
+                ((Driver1) e).drive();
+            }
+        }
         System.out.println(d1.specializacia);
         System.out.println(((Doctor1) e1).specializacia);
         ((Doctor1) e1).heal();
@@ -54,7 +62,7 @@ class Teacher1 extends Employee1 implements Help_able1 {
 }
 
 class Driver1 extends Employee1 implements Help_able1, Swim_able1 {
-    String car_name;
+    String car_name = "Mers";
 
     @Override
     public void resuscitation() {
@@ -84,4 +92,12 @@ interface Help_able1 {
 
 interface Swim_able1 {
     void swim();
+}
+
+class Casting {
+    public static void main(String[] args) {
+        String[] array2 = {"Privet", "Poka"};
+        Object[] array3 = array2;
+        String[] array4 = (String[]) array3;
+    }
 }
