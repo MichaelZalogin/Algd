@@ -31,16 +31,16 @@ class Widening {
 
 class Numeric_promotion {
     public static void main(String[] args) {
-        int i1 = 16;
-        long l1 = 17;
+        int i1 = 12;
+        long l1 = 37;
         System.out.println(i1 + l1);
         i1 *= l1;
         float f1 = 3.14f;
-        int i2 = 10;
+        int i2 = 14;
         System.out.println(f1 + i2);
 
-        byte b1 = 3;
-        short s1 = 4;
+        byte b1 = 6;
+        short s1 = 5;
         char c = 5;
         System.out.println(b1 + s1 + c);
         System.out.println(b1++);
