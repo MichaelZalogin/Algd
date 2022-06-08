@@ -22,5 +22,18 @@ public class PrimitiveDataTypes {
         double d2 = 54.0;
         double d3 = 54.0;
 
+        char c1 = 'd';
+        char c2 = 3000; //10
+        char c3 = '\u303B'; //16
+        System.out.println(c2 + " " + c3);
+
+        boolean bo1 = true;
+        boolean bo2 = false;
+
+        int a1 = 60;//10
+        int a2 = 0B111100;//2
+        int a3 = 074;//8
+        int a4 = 0x3C;//16
+        int a5 = 1_000_000_000;
     }
 }
