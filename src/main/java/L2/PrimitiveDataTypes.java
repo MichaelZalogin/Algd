@@ -20,6 +20,7 @@ public class PrimitiveDataTypes {
 
         double d1 = 5.5;
         double d2 = 54.0;
+        double d3 = 54.0;
 
     }
 }
