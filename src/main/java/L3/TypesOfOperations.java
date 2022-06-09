@@ -20,6 +20,5 @@ public class TypesOfOperations {
         int z = a + ++b;
         System.out.println(z);
         System.out.println(z);
-
     }
 }
