@@ -20,5 +20,10 @@ public class TypesOfOperations {
         int z = a + ++b;
         System.out.println(z);
         System.out.println(z);
+        z += 12;
+        z /= 11;
+        System.out.println(z);
+        boolean bo1 = a>b;
+        System.out.println(bo1);
     }
 }
