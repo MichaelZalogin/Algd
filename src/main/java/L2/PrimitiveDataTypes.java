@@ -32,8 +32,8 @@ public class PrimitiveDataTypes {
 
         int a1 = 60;//10
         int a2 = 0B111100;//2
-        int a3 = 074;//8
-        int a4 = 0x3C;//16
-        int a5 = 1_000_000_000;
+        int a3 = 0743;//8
+        int a4 = 0x3CF;//16
+        int a5 = 1_000_000;
     }
 }
