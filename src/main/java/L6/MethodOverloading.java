@@ -6,8 +6,12 @@ public class MethodOverloading {
         System.out.println(i1);
     }
 
+    void show(int i1, short b) {
+        System.out.println("method2");
+    }
+
     void show(int i1, int b) {
-        System.out.println(i1 + b);
+        System.out.println("method1");
     }
 
     void show(boolean b1) {
@@ -30,11 +34,12 @@ public class MethodOverloading {
 class MethodOverloadingTest {
     public static void main(String[] args) {
         MethodOverloading mo = new MethodOverloading();
-        int a = 500;
-        mo.show(a);
-        boolean b = true;
-        mo.show(b);
-        String s = "Privet!!!";
-        mo.show(s);
+//        int a = 500;
+//        mo.show(a);
+//        boolean b = true;
+//        mo.show(b);
+//        String s = "Privet!!!";
+//        mo.show(s);
+        mo.show(1,4);
     }
 }
