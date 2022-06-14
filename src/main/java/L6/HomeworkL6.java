@@ -1,5 +1,5 @@
 package L6;
-public class HomeWorkL5 { }
+public class HomeworkL6 { }
 class BankAccount {
     int id;
     String name;
