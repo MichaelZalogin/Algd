@@ -34,12 +34,12 @@ public class MethodOverloading {
 class MethodOverloadingTest {
     public static void main(String[] args) {
         MethodOverloading mo = new MethodOverloading();
-//        int a = 500;
-//        mo.show(a);
-//        boolean b = true;
-//        mo.show(b);
-//        String s = "Privet!!!";
-//        mo.show(s);
+        int a = 500;
+        mo.show(a);
+        boolean b = true;
+        mo.show(b);
+        String s = "Privet!!!";
+        mo.show(s);
         mo.show(1,4);
     }
 }
