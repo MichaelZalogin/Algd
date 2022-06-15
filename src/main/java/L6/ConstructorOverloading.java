@@ -1,6 +1,7 @@
 package L6;
 
-public class ConstructorOverloading {}
+public class ConstructorOverloading {
+}
 
 class Employee {
     int id;
@@ -36,11 +37,11 @@ class Employee {
     Employee() {
     }
 }
-    class EmployeeTest{
-        public static void main(String[] args) {
-            Employee emp1 = new Employee(1,"Ivanov",3);
-            Employee emp2 = new Employee();
-            Employee emp3 = new Employee(1,"Petr","Ivanov", 3,43.4,"Developer");
-        }
-    }
 
+class EmployeeTest {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee(1, "Ivanov", 3);
+        Employee emp2 = new Employee();
+        Employee emp3 = new Employee(1, "Petr", "Ivanov", 3, 43.4, "Developer");
+    }
+}
