@@ -29,9 +29,7 @@ class Employee {
     }
 
     Employee(int id, String surname, int age) {
-        this.id = id;
-        this.surname = surname;
-        this.age = age;
+        this(id, null, surname, age, 0.0, null);
     }
 
     Employee() {
