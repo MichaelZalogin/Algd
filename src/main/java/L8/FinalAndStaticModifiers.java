@@ -23,15 +23,29 @@ public class FinalAndStaticModifiers {
 class Car2 {
     String color;
     String engine;
+    static int count;
+
+    public Car2(String color, String engine) {
+        this.color = color;
+        this.engine = engine;
+        count++;
+        System.out.println("Машина №: " + count + " создана!");
+    }
+
+    public Car2() {
+        count++;
+        System.out.println("Машина №: " + count + " создана!");
+    }
 }
 
 class Human1 {
     String name;
-    Car2 c1 = new Car2();
+    Car2 c1 = new Car2("Blue", "V9");
 
     public static void main(String[] args) {
         Human1 person = new Human1();
         person.c1.color = "Black";
         person.c1.engine = "V6";
+        Car2 c2 = new Car2();
     }
 }
