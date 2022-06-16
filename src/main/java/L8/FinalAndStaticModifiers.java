@@ -36,6 +36,10 @@ class Car2 {
         count++;
         System.out.println("Машина №: " + count + " создана!");
     }
+
+    public static void showCount() {
+        System.out.println("Создано машин: " + count);
+    }
 }
 
 class Human1 {
@@ -47,5 +51,7 @@ class Human1 {
         person.c1.color = "Black";
         person.c1.engine = "V6";
         Car2 c2 = new Car2();
+        System.out.println(Car2.count);
+        Car2.showCount();
     }
 }
