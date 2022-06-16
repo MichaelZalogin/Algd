@@ -1,0 +1,1 @@
+<h1><img src="Task7.jpg" width="100%" /></h1>
