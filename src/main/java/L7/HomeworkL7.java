@@ -24,7 +24,7 @@ class Employee {
 
     }
 
-    public void showSalary(Employee emp) {
+    private void showSalary(Employee emp) {
         System.out.println(emp.salary);
     }
 
@@ -32,7 +32,14 @@ class Employee {
         System.out.println(emp.surname);
     }
 
-    public void showId(Employee emp) {
+    void showId(Employee emp) {
         System.out.println(emp.id);
+    }
+}
+
+class EmployeeTest {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("Ivanov", 32);
+        System.out.println(emp1.surname);
     }
 }
