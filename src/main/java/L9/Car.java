@@ -20,7 +20,7 @@ public class Car {
         System.out.println("Цвет машины: " + color);
     }
 
-    public void chanceColor(String color) {
+    public void change_color(String color) {
         System.out.println("Цвет машины изменился");
         int cost = 0;
         this.color = color;
