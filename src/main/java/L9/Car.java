@@ -11,6 +11,11 @@ public class Car {
         this.engine = engine;
     }
 
+    public static void changeA(int b) {
+        Car c1 = new Car("Red", "V8");
+        c1.engine = "V10"; //только после создания объекта можно определить переменную объекта в статичном методе.
+    }
+
     public void showColor() {
         System.out.println("Цвет машины: " + color);
     }
