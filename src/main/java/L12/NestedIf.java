@@ -26,5 +26,9 @@ public class NestedIf<a> {
 
     public static void main(String[] args) {
         new NestedIf().maximum(4, 7, 0);
+        int a = 10;
+        int b = 20;
+        int maximum = (a>b)? a : b ;
+        System.out.println("Maximum - " + maximum);
     }
 }
