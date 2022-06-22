@@ -33,9 +33,10 @@ class ForLoop2 {
 }
 class ForLoop3 {
     public static void main(String[] args) {
-        for (int hour = 0; hour <=23; hour++){//outer loop
-           for (int minute = 0; minute < 60; minute++){// inner loop
-               System.out.println(hour + ":" + minute);
+        OUTER: for (int hour = 0; hour <=23; hour++){//outer loop
+           INNER: for (int minutes = 0; minutes < 60; minutes++){// inner loop
+               System.out.println(hour + ":" + minutes);
+               if (minutes == 30) {break OUTER;}
            }
         }
     }
