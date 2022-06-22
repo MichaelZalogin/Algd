@@ -44,16 +44,21 @@ class L15 {
 
 class Clock {
     protected static void time() {
-        BASIC: for (int hour = 0; hour <= 24; hour++) {
+        BASIC:
+        for (int hour = 0; hour <= 24; hour++) {
             System.out.println("Начало аутер лупа");
-            NOT_PRIMARY:for (int minute = 0; minute <= 59; minute++) {
+            NOT_PRIMARY:
+            for (int minute = 0; minute <= 59; minute++) {
 
                 System.out.println(hour + " : " + minute);
-                if(minute==30){break BASIC;}
+                if (minute == 30) {
+                    break BASIC;
+                }
             }
             System.out.println("Конец интер лупа");
         }
     }
+
     public static void main(String[] args) {
         Clock Test = new Clock();
         Test.time();
