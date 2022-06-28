@@ -19,6 +19,5 @@ public class Txt {
             }
             System.out.print(c1);
         }
-
     }
 }
