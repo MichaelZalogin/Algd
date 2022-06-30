@@ -40,7 +40,16 @@ public class ArrayInit {
         }
         int[] array20 = {1, 9, 3, -8, 0, 5, 4, 1};
         for (int i = 0; i < array20.length; i++) {
-            System.out.println(array20[i]);
+            System.out.print(array20[i] + " ");
         }
+        System.out.println();
+
+        Arrays.sort(array20);
+        for (int i = 0; i < array20.length; i++) {
+            System.out.print(array20[i] + " ");
+        }
+
+        int index1 = Arrays.binarySearch(array20, 9);
+        System.out.println(index1);
     }
 }
