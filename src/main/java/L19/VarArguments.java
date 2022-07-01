@@ -35,5 +35,13 @@ public class VarArguments {
         for (int a : array1) {//Foreach loop
             System.out.print(a + " ");
         }
+        System.out.println();
+        String[] students = {"Ivanov", "Petrov", "Sidorov"};
+        String[] exam = {"Mathanaliz", "Philosofy"};
+        for (String s1 : students) {
+            for (String s2 : exam) {
+                System.out.println(s1 + " " + s2);
+            }
+        }
     }
 }
