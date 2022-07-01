@@ -43,5 +43,11 @@ public class VarArguments {
                 System.out.println(s1 + " " + s2);
             }
         }
+        int[][] array10 = {{1, 2, 3, 4}, {5, 6}, {4, 5, 3}};
+        for (int[] array2 : array10) {
+            for (int a : array2) {
+                System.out.print(a + " ");
+            }
+        }
     }
 }
