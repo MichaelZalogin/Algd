@@ -13,5 +13,25 @@ public class Test1 {
         s1 = s2;
         String s3 = s1;
         s1 = null;
+        Test2 t2 = new Test2();
+    }
+}
+
+class Test2 {
+    Test2() {
+        System.out.println("Created");
+    }
+
+    public void abc(String s) {
+        System.out.println(s);
+    }
+
+    public void abc(boolean b) {
+        System.out.println(b);
+    }
+
+    private StringBuilder abc(StringBuilder sb) {
+        System.out.println(sb);
+        return new StringBuilder("poka");
     }
 }
