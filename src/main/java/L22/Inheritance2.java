@@ -15,7 +15,12 @@ public class Inheritance2 {
 }
 
 class Test5 extends Inheritance2 {
-    public Test5() {
-        super(" ", " ", " ", " ");
+    int a;
+    double f;
+
+    public Test5(String n, String s, String l, String b, int a, double f) {
+        super(n, s, l, b);
+        this.a = a;
+        this.f = f;
     }
 }
