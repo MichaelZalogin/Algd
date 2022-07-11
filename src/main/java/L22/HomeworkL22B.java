@@ -4,11 +4,11 @@ public class HomeworkL22B {
 }
 
 class Animal5 {
-    int eyes;
-
     Animal5() {
         System.out.println("I am Animal");
     }
+
+    int eyes;
 
     void eat() {
         System.out.println("Animals eats");
@@ -20,15 +20,15 @@ class Animal5 {
 }
 
 class Pet extends Animal5 {
-    String name;
-    final int TAIL = 1;
-    final int PAW = 4;
-
 
     Pet() {
         System.out.println("I am pet");
         eyes = 2;
     }
+
+    String name;
+    final int TAIL = 1;
+    final int PAW = 4;
 
     void run() {
         System.out.println("Pet runs");
@@ -40,6 +40,7 @@ class Pet extends Animal5 {
 }
 
 class Dog extends Pet {
+
     Dog(String name) {
         this.name = name;
         System.out.println("I am dog and my name is " + name);
@@ -51,6 +52,7 @@ class Dog extends Pet {
 }
 
 class Cat extends Pet {
+
     Cat(String name) {
         this.name = name;
         System.out.println("I am cat and my name is " + name);
@@ -62,6 +64,7 @@ class Cat extends Pet {
 }
 
 class Test11 {
+
     public static void main(String[] args) {
         Dog d1 = new Dog("Bobik");
         System.out.println(d1.PAW);
