@@ -14,6 +14,7 @@ public class Overriding {
         Overriding ov1 = new Overriding();
         Animal a1 = new Mouse();
         ov1.abc(a1);
+        a1.getName();
     }
 }
 
