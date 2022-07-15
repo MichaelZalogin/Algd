@@ -14,6 +14,10 @@ public class Employee {
         System.out.println("Sleep");
     }
 
+    public static void main(String[] args) {
+        Help_able h1 = new Teacher();
+        Swim_able a1 = new Driver();
+    }
 }
 
 class Doctor extends Employee {
