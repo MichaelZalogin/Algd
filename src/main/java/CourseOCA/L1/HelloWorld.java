@@ -1,4 +1,4 @@
-package OCA.L1;
+package CourseOCA.L1;
 
 public class HelloWorld {
     public static void main(String[] args) {
