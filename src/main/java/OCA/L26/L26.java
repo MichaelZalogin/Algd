@@ -1,4 +1,4 @@
-package L26;
+package OCA.L26;
 
 public class L26 {
     public static void main(String[] args) {
