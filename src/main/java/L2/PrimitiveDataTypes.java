@@ -1,4 +1,4 @@
-package OCA.L2;
+package L2;
 
 public class PrimitiveDataTypes {
     public static void main(String[] args) {
