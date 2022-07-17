@@ -1,4 +1,4 @@
-package L3;
+package OCA.L3;
 
 public class TypesOfOperations {
     public static void main(String[] args) {
