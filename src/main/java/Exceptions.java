@@ -12,6 +12,8 @@ public class Exceptions {
             System.out.println("Файл найден!");
         } catch (FileNotFoundException e) {
             System.out.println("Не нашел файл и поймал ошибку: " + e);
+        } catch (NullPointerException e) {
+            System.out.println("Не нашел файл и поймал ошибку: " + e);
         } finally {
             System.out.println("Эта часть обрабатывается всегда");
         }
