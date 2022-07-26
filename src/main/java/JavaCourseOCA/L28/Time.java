@@ -26,6 +26,5 @@ public class Time {
 
         LocalTime l1 = LocalTime.of(3, 5, 6);
         System.out.println(l1);
-
     }
 }
