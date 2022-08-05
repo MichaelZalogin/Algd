@@ -26,7 +26,7 @@ public class FunctionalInterfaces {
         System.out.println("OurCar" + ourCar);
 
         changeCar(ourCar.get(0), car -> {
-            car.color = "Black";
+            car.color = "Yellow";
             car.engine = 1.6;
             car.model = "Geely";
             System.out.println("Updated" + car);
