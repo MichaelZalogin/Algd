@@ -1,4 +1,4 @@
-package JavaCourseBlackBelt.L1;
+package javaCourseBlackBelt.comparation;
 
 import java.util.Collections;
 import java.util.ArrayList;
