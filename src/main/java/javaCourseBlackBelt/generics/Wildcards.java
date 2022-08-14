@@ -6,9 +6,9 @@ import java.util.List;
 public class Wildcards {
     public static void main(String[] args) {
         List<?> list = new ArrayList<String>();
-        list.add("Hello");
+//        list.add("Hello");
         List<? extends Number> list15 = new ArrayList<Integer>();
-        list15.add(21);
+//        list15.add(21);
 
         List<Double> list1 = new ArrayList<>();
         list1.add(3.14);
