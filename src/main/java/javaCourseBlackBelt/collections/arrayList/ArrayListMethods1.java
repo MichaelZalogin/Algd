@@ -1,4 +1,4 @@
-package javaCourseBlackBelt.collections;
+package javaCourseBlackBelt.collections.arrayList;
 
 import java.util.ArrayList;
 import java.util.List;
