@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayListMethods3 {
+
     public static void main(String[] args) {
         List<Employee> list1 = new ArrayList<>();
         Employee emp1 = new Employee(21, "Ivan", "Treg", 21243);
@@ -26,5 +27,15 @@ public class ArrayListMethods3 {
         list2.add(emp7);
         list2.add(emp8);
         System.out.println(list2);
+
+        list1.addAll(list2);
+        System.out.println(list1);
+        list1.clear();
+        System.out.println(list1);
+        System.out.println(list2.indexOf(emp7));
+        System.out.println(list2.lastIndexOf(emp7));
+        System.out.println(list2.lastIndexOf(emp7));
+        System.out.println(list2.size());
+        System.out.println(list1.isEmpty());
     }
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-class Employee {
+class Employee implements Comparable<Employee> {
     int id;
     String name;
     String surname;
@@ -15,6 +15,11 @@ class Employee {
         this.name = name;
         this.surname = surname;
         this.salary = salary;
+    }
+
+    @Override
+    public int compareTo(Employee anotherEmp) {
+        return this.name.compareTo(anotherEmp.name);
     }
 
     @Override
