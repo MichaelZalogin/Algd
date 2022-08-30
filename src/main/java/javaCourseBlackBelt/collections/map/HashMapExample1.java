@@ -18,5 +18,12 @@ public class HashMapExample1 {
         map1.remove(1576);
         System.out.println(map1);
         System.out.println(map1.containsValue("Maria"));
+        System.out.println(map1.containsKey(500));
+        System.out.println(map1.keySet());
+        System.out.println(map1.values());
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("Black", "Petr");
+        map2.put("White", "Andrey");
+        System.out.println(map2);
     }
 }
