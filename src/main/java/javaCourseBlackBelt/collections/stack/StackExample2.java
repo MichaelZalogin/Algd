@@ -9,9 +9,15 @@ public class StackExample2 {
         stack.push("Oleg");
         stack.push("Katya");
         stack.push("Petr");
+        while (!stack.isEmpty()) {
+            System.out.println(stack);
+            System.out.println(stack.pop());
+        }
+        stack.push("Michael");
+        stack.push("Oleg");
+        stack.push("Katya");
+        stack.push("Petr");
         System.out.println(stack);
-        System.out.println(stack.pop());
-        System.out.println(stack);
-        System.out.println(stack.pop());
+        System.out.println(stack.peek());
     }
 }
