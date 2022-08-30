@@ -17,4 +17,10 @@ public class StackExample {
         abc2();
         System.out.println("abc3 ends");
     }
+
+    public static void main(String[] args) {
+        System.out.println("main starts");
+        abc3();
+        System.out.println("main ends");
+    }
 }
