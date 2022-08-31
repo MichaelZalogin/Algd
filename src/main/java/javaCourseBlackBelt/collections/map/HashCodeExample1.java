@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class HashCodeEx1 {
+public class HashCodeExample1 {
     public static void main(String[] args) {
         Map<Student, Double> map = new HashMap<>();
         Student st1 = new Student("Ivan", "Petrov", 3);
@@ -22,24 +22,27 @@ public class HashCodeEx1 {
     }
 }
 
-class Student {
-    String name;
-    String surname;
-    int course;
+final class Student {
+    final private String NAME;
+    final private String SURNAME;
+    final private int COURSE;
 
-    public Student(String name, String surname, int course) {
-        this.name = name;
-        this.surname = surname;
-        this.course = course;
+    public Student(String NAME, String SURNAME, int COURSE) {
+        this.NAME = NAME;
+        this.SURNAME = SURNAME;
+        this.COURSE = COURSE;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", course=" + course +
-                '}';
+    public String getNAME() {
+        return this.NAME;
+    }
+
+    public String getSURNAME() {
+        return this.SURNAME;
+    }
+
+    public int getCOURSE() {
+        return this.COURSE;
     }
 
     @Override
@@ -47,11 +50,20 @@ class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return course == student.course && Objects.equals(name, student.name) && Objects.equals(surname, student.surname);
+        return COURSE == student.COURSE && Objects.equals(NAME, student.NAME) && Objects.equals(SURNAME, student.SURNAME);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, course);
+        return Objects.hash(NAME, SURNAME, COURSE);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "NAME='" + NAME + '\'' +
+                ", SURNAME='" + SURNAME + '\'' +
+                ", COURSE=" + COURSE +
+                '}';
     }
 }
