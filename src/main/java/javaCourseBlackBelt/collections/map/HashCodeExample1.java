@@ -22,7 +22,7 @@ public class HashCodeExample1 {
     }
 }
 
-final class Student {
+final class Student implements Comparable<Student> {
     final private String NAME;
     final private String SURNAME;
     final private int COURSE;
@@ -43,6 +43,11 @@ final class Student {
 
     public int getCOURSE() {
         return this.COURSE;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.getNAME().compareTo(o.getNAME());
     }
 
     @Override
