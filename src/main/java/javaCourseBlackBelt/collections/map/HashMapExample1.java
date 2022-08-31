@@ -25,5 +25,8 @@ public class HashMapExample1 {
         map2.put("Black", "Petr");
         map2.put("White", "Andrey");
         System.out.println(map2);
+        System.out.println(map1);
+        map1.put(1000, "Petr");
+        System.out.println(map1);
     }
 }
