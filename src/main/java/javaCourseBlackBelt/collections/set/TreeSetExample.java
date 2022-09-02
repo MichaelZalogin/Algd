@@ -1,5 +1,6 @@
 package javaCourseBlackBelt.collections.set;
 
+import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -35,6 +36,8 @@ public class TreeSetExample {
         System.out.println(treeSet1.headSet(st6));
         System.out.println(treeSet1.tailSet(st6));
         System.out.println(treeSet1.subSet(st7, st6));
+        System.out.println(st1.equals(st6));
+        System.out.println(st1.hashCode() == st6.hashCode());
     }
 }
 
@@ -58,5 +61,18 @@ class Student implements Comparable<Student> {
     public Student(String name, int course) {
         this.name = name;
         this.course = course;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return course == student.course;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(course);
     }
 }
