@@ -11,5 +11,9 @@ public class LinkedHashSetExample {
         linkedHashSet.add(8);
         linkedHashSet.add(10);
         System.out.println(linkedHashSet);
+        linkedHashSet.remove(8);
+        System.out.println(linkedHashSet);
+        System.out.println(linkedHashSet.contains(8));
+        System.out.println(linkedHashSet.contains(10));
     }
 }
