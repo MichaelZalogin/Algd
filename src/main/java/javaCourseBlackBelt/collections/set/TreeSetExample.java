@@ -28,6 +28,13 @@ public class TreeSetExample {
         treeSet1.add(st4);
         treeSet1.add(st5);
         System.out.println(treeSet1);
+        System.out.println(treeSet1.first());
+        System.out.println(treeSet1.last());
+        Student st6 = new Student("Kocty", 3);
+        Student st7 = new Student("Kocty", 1);
+        System.out.println(treeSet1.headSet(st6));
+        System.out.println(treeSet1.tailSet(st6));
+        System.out.println(treeSet1.subSet(st7, st6));
     }
 }
 
