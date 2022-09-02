@@ -27,12 +27,26 @@ public class TreeSetExample {
         treeSet1.add(st3);
         treeSet1.add(st4);
         treeSet1.add(st5);
+        System.out.println(treeSet1);
     }
 }
 
-class Student {
+class Student implements Comparable<Student> {
     String name;
     int course;
+
+    @Override
+    public int compareTo(Student o) {
+        return this.course - o.course;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", course=" + course +
+                '}';
+    }
 
     public Student(String name, int course) {
         this.name = name;
