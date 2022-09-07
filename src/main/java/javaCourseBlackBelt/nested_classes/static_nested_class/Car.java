@@ -4,11 +4,18 @@ public class Car {
     String color;
     int doorCount;
     Engine engine;
+    private static int a;
 
     public Car(String color, int doorCount, Engine engine) {
         this.color = color;
         this.doorCount = doorCount;
         this.engine = engine;
+    }
+
+    void method() {
+        System.out.println(Engine.countOfObject);
+        Engine e = new Engine(200);
+        System.out.println(e.horsePower);
     }
 
     @Override
@@ -21,16 +28,19 @@ public class Car {
     }
 
     public static class Engine {
-        int hoursePower;
+        private int horsePower;
+        static int countOfObject;
 
         public Engine(int hoursePower) {
-            this.hoursePower = hoursePower;
+            System.out.println(a);
+            this.horsePower = hoursePower;
+            countOfObject++;
         }
 
         @Override
         public String toString() {
             return "My engine: {" +
-                    "hoursePower=" + hoursePower +
+                    "hoursePower=" + horsePower +
                     '}';
         }
     }
@@ -38,9 +48,15 @@ public class Car {
 
 class Test {
     public static void main(String[] args) {
-        Car.Engine engine = new Car.Engine(256);
+        Car.Engine engine = new Car.Engine(245);
         System.out.println(engine);
         Car car = new Car("red", 2, engine);
         System.out.println(car);
+    }
+}
+
+class Z extends Car.Engine {
+    Z() {
+        super(200);
     }
 }
