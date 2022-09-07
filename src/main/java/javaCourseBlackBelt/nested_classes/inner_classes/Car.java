@@ -5,17 +5,14 @@ public class Car {
     int doorCount;
     Engine engine;
 
-    public Car(String color, int doorCount, int horsePower) {
+    public Car(String color, int doorCount) {
         this.color = color;
         this.doorCount = doorCount;
-        this.engine = this.new Engine(horsePower);
     }
 
-//    void method() {
-//        System.out.println(Engine.countOfObject);
-//        Engine e = new Engine(200);
-//        System.out.println(e.horsePower);
-//    }
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
 
     @Override
     public String toString() {
@@ -29,7 +26,7 @@ public class Car {
     public class Engine {
         private int horsePower;
 
-        public Engine(int hoursePower) {
+        public Engine(int horsePower) {
         }
 
         @Override
@@ -43,7 +40,10 @@ public class Car {
 
 class Test {
     public static void main(String[] args) {
-        Car car = new Car("Red", 3, 300);
-        Car.Engine engine = car.new Engine(232);
+        Car car = new Car("Red", 3);
+        Car.Engine engine = car.new Engine(250);
+        car.setEngine(engine);
+        System.out.println(engine);
+        System.out.println(car);
     }
 }
