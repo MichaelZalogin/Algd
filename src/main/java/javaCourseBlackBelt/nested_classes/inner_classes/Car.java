@@ -27,12 +27,13 @@ public class Car {
         private int horsePower;
 
         public Engine(int horsePower) {
+            this.horsePower = horsePower;
         }
 
         @Override
         public String toString() {
             return "My engine: {" +
-                    "hoursePower=" + horsePower +
+                    "horsePower=" + horsePower +
                     '}';
         }
     }
@@ -45,5 +46,7 @@ class Test {
         car.setEngine(engine);
         System.out.println(engine);
         System.out.println(car);
+        Car.Engine engine1 = new Car("Red", 3).new Engine(210);
+        System.out.println(engine1);
     }
 }
