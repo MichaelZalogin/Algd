@@ -29,7 +29,7 @@ public class Car {
 
         @Override
         public String toString() {
-            return "My engine{" +
+            return "My engine: {" +
                     "hoursePower=" + hoursePower +
                     '}';
         }
@@ -40,5 +40,7 @@ class Test {
     public static void main(String[] args) {
         Car.Engine engine = new Car.Engine(256);
         System.out.println(engine);
+        Car car = new Car("red", 2, engine);
+        System.out.println(car);
     }
 }
