@@ -31,9 +31,9 @@ public class Car {
         private int horsePower;
         static int countOfObject;
 
-        public Engine(int hoursePower) {
+        public Engine(int horsePower) {
             System.out.println(a);
-            this.horsePower = hoursePower;
+            this.horsePower = horsePower;
             countOfObject++;
         }
 
