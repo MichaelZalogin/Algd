@@ -5,6 +5,14 @@ import java.util.List;
 
 public class StudentInfo {
 
+    void testStudents(List<Student> a1, StudentChecks sc) {
+        for (Student s : a1) {
+            if (sc.check(s)) {
+                System.out.println(s);
+            }
+        }
+    }
+
     void printStudentOverGrage(List<Student> a1, double grade) {
         for (Student student : a1) {
             if (student.avgGrade > grade) {
@@ -28,27 +36,49 @@ public class StudentInfo {
             }
         }
     }
+}
 
-    class Test {
-        public static void main(String[] args) {
-            Student st1 = new Student("Ivan", 'm', 22, 3, 8.3);
-            Student st2 = new Student("Nikolay", 'm', 28, 2, 6.4);
-            Student st3 = new Student("Elena", 'f', 19, 1, 8.9);
-            Student st4 = new Student("Petr", 'm', 35, 4, 7);
-            Student st5 = new Student("Marya", 'f', 23, 3, 9.1);
-            List<Student> studentList = new ArrayList<>();
-            studentList.add(st1);
-            studentList.add(st2);
-            studentList.add(st3);
-            studentList.add(st4);
-            studentList.add(st5);
+class Test {
+    public static void main(String[] args) {
+        Student st1 = new Student("Ivan", 'm', 22, 3, 8.3);
+        Student st2 = new Student("Nikolay", 'm', 28, 2, 6.4);
+        Student st3 = new Student("Elena", 'f', 19, 1, 8.9);
+        Student st4 = new Student("Petr", 'm', 35, 4, 7);
+        Student st5 = new Student("Marya", 'f', 23, 3, 9.1);
+        List<Student> studentList = new ArrayList<>();
+        studentList.add(st1);
+        studentList.add(st2);
+        studentList.add(st3);
+        studentList.add(st4);
+        studentList.add(st5);
 
-            StudentInfo studentInfo = new StudentInfo();
-            studentInfo.printStudentOverGrage(studentList, 8);
-            System.out.println("=============================================================");
-            studentInfo.printStudentsOverMixConditions(studentList, 20, 8.5, 'm');
-            System.out.println("=============================================================");
-            studentInfo.printStudentUnderAge(studentList, 30);
-        }
+        StudentInfo studentInfo = new StudentInfo();
+        studentInfo.printStudentOverGrage(studentList, 8);
+        System.out.println("=============================================================");
+        studentInfo.printStudentsOverMixConditions(studentList, 20, 8.5, 'm');
+        System.out.println("=============================================================");
+        studentInfo.printStudentUnderAge(studentList, 30);
+        System.out.println("=============================================================");
+        CheckOverGrade checkOverGrade = new CheckOverGrade();
+        studentInfo.testStudents(studentList, checkOverGrade);
+        System.out.println("=============================================================");
+        studentInfo.testStudents(studentList, new StudentChecks() {
+            @Override
+            public boolean check(Student s) {
+                return s.avgGrade > 8;
+            }
+        });
+        System.out.println("=============================================================");
+        studentInfo.testStudents(studentList, (Student s) -> {
+            return s.avgGrade > 8;
+        });
+        System.out.println("=============================================================");
+    }
+}
+
+class CheckOverGrade implements StudentChecks {
+    @Override
+    public boolean check(Student s) {
+        return s.avgGrade > 8;
     }
 }
