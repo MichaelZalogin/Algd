@@ -4,12 +4,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class StudentInfo {
 
     void testStudents(List<Student> a1, StudentChecks sc) {
         for (Student s : a1) {
             if (sc.check(s)) {
+                System.out.println(s);
+            }
+        }
+    }
+
+    void testStudents2(List<Student> a1, Predicate<Student> sc1) {
+        for (Student s : a1) {
+            if (sc1.test(s)) {
                 System.out.println(s);
             }
         }
@@ -92,6 +101,12 @@ class Test {
         StudentChecks sc = s -> s.avgGrade > 6;
         studentInfo.testStudents(studentList, sc);
         System.out.println("=============================================================");
+
+        Predicate<Student> stp1 = p -> p.avgGrade > 6 && p.sex == 'm';
+        Predicate<Student> stp2 = p -> p.age > 20 && p.sex == 'f';
+
+        studentInfo.testStudents2(studentList, stp1);
+        studentInfo.testStudents2(studentList, stp2);
     }
 }
 
