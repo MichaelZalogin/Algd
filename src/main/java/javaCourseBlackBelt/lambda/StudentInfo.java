@@ -107,6 +107,9 @@ class Test {
 
         studentInfo.testStudents2(studentList, stp1);
         studentInfo.testStudents2(studentList, stp2);
+        studentInfo.testStudents2(studentList, stp2.and(stp1));
+        studentInfo.testStudents2(studentList, stp2.and(stp1));
+        studentInfo.testStudents2(studentList, stp2.negate());
     }
 }
 
