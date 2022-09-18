@@ -1,6 +1,8 @@
 package javaCourseBlackBelt.lambda;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class StudentInfo {
@@ -52,7 +54,18 @@ class Test {
         studentList.add(st4);
         studentList.add(st5);
 
+
         StudentInfo studentInfo = new StudentInfo();
+
+        Collections.sort(studentList, (s1, s2) -> s2.name.compareTo(s1.name));
+
+        Collections.sort(studentList, new Comparator<Student>() {
+            @Override
+            public int compare(Student s1, Student s2) {
+                return s1.name.compareTo(s2.name);
+            }
+        });
+
         studentInfo.printStudentOverGrage(studentList, 8);
         System.out.println("=============================================================");
         studentInfo.printStudentsOverMixConditions(studentList, 20, 8.5, 'm');
@@ -72,6 +85,12 @@ class Test {
         studentInfo.testStudents(studentList, (Student s) -> {
             return s.avgGrade > 8;
         });
+        System.out.println("=============================================================");
+        studentInfo.testStudents(studentList, s -> s.avgGrade > 5);
+        System.out.println("=============================================================");
+
+        StudentChecks sc = s -> s.avgGrade > 6;
+        studentInfo.testStudents(studentList, sc);
         System.out.println("=============================================================");
     }
 }
