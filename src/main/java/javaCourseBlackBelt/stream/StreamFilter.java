@@ -3,6 +3,7 @@ package javaCourseBlackBelt.stream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamFilter {
     public static void main(String[] args) {
@@ -22,6 +23,9 @@ public class StreamFilter {
                         -> element.getAge() > 22 && element.getAvgGrade() < 7.2)
                 .collect(Collectors.toList());
         System.out.println(studentList);
+
+        Stream<Student> myStream = Stream.of(st1, st2, st3, st4, st5);
+        myStream.filter(element -> element.getAge() > 20).collect(Collectors.toList());
     }
 }
 
