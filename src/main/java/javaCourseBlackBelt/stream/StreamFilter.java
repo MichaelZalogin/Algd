@@ -26,6 +26,10 @@ public class StreamFilter {
 
         Stream<Student> myStream = Stream.of(st1, st2, st3, st4, st5);
         myStream.filter(element -> element.getAge() > 20).collect(Collectors.toList());
+
+        List<Student> list12 = studentList.stream().sorted((a, b) ->
+                a.getName().compareTo(b.getName())).collect(Collectors.toList());
+        System.out.println(list12);
     }
 }
 
