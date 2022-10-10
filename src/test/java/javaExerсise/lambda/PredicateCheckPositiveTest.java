@@ -8,8 +8,8 @@ public class PredicateCheckPositiveTest {
 
     @Test
     public void whenPositive() {
-//        assertTrue(PredicateCheckPositive.check(1));
-//        assertFalse(PredicateCheckPositive.check(-1));
-//        assertFalse(PredicateCheckPositive.check(0));
+        assertTrue(PredicateCheckPositive.check(1));
+        assertFalse(PredicateCheckPositive.check(-1));
+        assertFalse(PredicateCheckPositive.check(0));
     }
 }
