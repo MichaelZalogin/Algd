@@ -1,9 +1,7 @@
 package javaExerсise.streamAPI;
 
 import org.junit.Test;
-
 import java.util.stream.Collectors;
-
 import static org.junit.Assert.assertEquals;
 
 public class StreamOfMethodTest {
