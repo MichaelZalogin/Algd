@@ -28,5 +28,4 @@ public class SummingMethodTest {
         );
         assertEquals(expect, SummingMethod.summing(List.of(u1, u2, u3)));
     }
-
 }

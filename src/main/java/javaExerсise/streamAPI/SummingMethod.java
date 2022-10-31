@@ -59,8 +59,10 @@ public class SummingMethod {
     }
 
     public static Map<String, Integer> summing(List<User> users) {
-        return users.stream().flatMap(user -> new Pair(user, user.getBills().stream())
-                .collect(Collectors
-                        .groupingBy(s -> s, Collectors.summingInt(a -> a))));
+        return users.stream()
+                .map(user -> new Pair(user, new Bill(user.getBills()
+                        .stream().mapToInt(Bill::getBalance).sum())))
+                .collect(Collectors.groupingBy(n -> n.getUser().getName(),
+                        Collectors.summingInt(n -> n.getBill().getBalance())));
     }
 }
