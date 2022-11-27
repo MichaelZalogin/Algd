@@ -14,9 +14,10 @@ public class Task52 {
                 a--;
             }
         } else {
+            a = n;
             while (a > 0) {
-                stringJoiner.add(String.valueOf(n));
-                n++;
+                stringJoiner.add(String.valueOf(m));
+                m++;
                 a--;
             }
         }
