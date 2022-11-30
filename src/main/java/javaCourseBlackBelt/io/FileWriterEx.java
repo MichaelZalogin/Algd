@@ -10,9 +10,7 @@ public class FileWriterEx {
                 "Мне известно, что мне ничего не известно!\n" +
                 "Вот последняя правда открытая мной.";
         String s = "Privet";
-        FileWriter writer = null;
-        try {
-            writer = new FileWriter("C:\\Users\\Professional\\Desktop\\test1.txt", true);
+        try (FileWriter writer = new FileWriter("C:\\Users\\Professional\\Desktop\\test1.txt")) {
             for (int i = 0; i < rubai.length(); i++) {
                 writer.write(rubai.charAt(i));
             }
@@ -21,8 +19,6 @@ public class FileWriterEx {
             System.out.println("Done!");
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            writer.close();
         }
     }
 }
