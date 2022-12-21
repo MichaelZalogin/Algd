@@ -8,9 +8,7 @@ public class Task78 {
             if (days[i] == 2 && values[i] <= 5) {
                 silent++;
             }
-        }
-        for (int j = 0; j < values.length; j++) {
-            if (values[j] >= 7) {
+            if (values[i] >= 7) {
                 danger++;
             }
         }
