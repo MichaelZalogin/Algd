@@ -1,9 +1,8 @@
 package hibernate.runner;
 
+import hibernate.entity.Role;
 import hibernate.entity.User;
 import org.hibernate.Session;
-
-import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
 import org.hibernate.cfg.Configuration;
 
 import java.time.LocalDate;
@@ -13,8 +12,12 @@ public class HibernateRunner {
 
         Configuration configuration = new Configuration();
         configuration.configure("hibernate.cfg.xml");
+        /** Парсинг имен полей */
 //        configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
+        /** Регистрация сущностей */
 //        configuration.addAnnotatedClass(User.class);
+        /** Конвентер User типов */
+//        configuration.addAttributeConverter(User class, true);
         try (var sessionFactory = configuration.buildSessionFactory()) {
             Session session = sessionFactory.openSession();
 
@@ -26,6 +29,7 @@ public class HibernateRunner {
                     .lastname("Ivanov")
                     .birthDate(LocalDate.of(2000, 1, 19))
                     .age(20)
+                    .role(Role.ADMIN)
                     .build();
             session.save(user);
 

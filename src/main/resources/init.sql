@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS users
     firstname  varchar(128),
     lastname   varchar(128),
     birth_date DATE,
-    age        int
+    age        int,
+    role       varchar(128)
 )
