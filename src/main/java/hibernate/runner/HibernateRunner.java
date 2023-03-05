@@ -1,8 +1,10 @@
 package hibernate.runner;
 
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import hibernate.entity.Birthday;
 import hibernate.entity.Role;
 import hibernate.entity.User;
+import hibernate.type.JsonType;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 
@@ -19,6 +21,8 @@ public class HibernateRunner {
 //        configuration.addAnnotatedClass(User.class);
         /** Конвентер User типов */
 //        configuration.addAttributeConverter(User class, true);
+        /** Регистрация User типа */
+        configuration.registerTypeOverride(new JsonBinaryType());
         try (var sessionFactory = configuration.buildSessionFactory()) {
             Session session = sessionFactory.openSession();
 
@@ -30,6 +34,12 @@ public class HibernateRunner {
                     .lastname("Ivanov")
                     .birthDate(new Birthday(LocalDate.of(2000, 1, 19)))
                     .role(Role.ADMIN)
+                    .info("""
+                            {
+                            "name" : "Ivan"
+                            "id" : 25
+                            }
+                            """)
                     .build();
             session.save(user);
 
