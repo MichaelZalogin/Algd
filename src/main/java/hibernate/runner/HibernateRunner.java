@@ -1,10 +1,8 @@
 package hibernate.runner;
 
-import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import hibernate.entity.Birthday;
 import hibernate.entity.Role;
 import hibernate.entity.User;
-import hibernate.type.JsonType;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 
@@ -22,27 +20,26 @@ public class HibernateRunner {
         /** Конвентер User типов */
 //        configuration.addAttributeConverter(User class, true);
         /** Регистрация User типа */
-        configuration.registerTypeOverride(new JsonBinaryType());
+//        configuration.registerTypeOverride(new JsonBinaryType());
         try (var sessionFactory = configuration.buildSessionFactory()) {
             Session session = sessionFactory.openSession();
 
             session.beginTransaction();
 
             User user = User.builder()
-                    .username("ivan@gmail.com")
+                    .username("ivan3@gmail.com")
                     .firstname("Ivan")
                     .lastname("Ivanov")
                     .birthDate(new Birthday(LocalDate.of(2000, 1, 19)))
                     .role(Role.ADMIN)
-                    .info("""
-                            {
-                            "name" : "Ivan"
-                            "id" : 25
-                            }
-                            """)
                     .build();
-            session.save(user);
-
+//            session.save(user);
+            /** Если юзера не будет, будет исключение */
+//            session.update(user);
+            /** Если юзера не будет, создаст юзера */
+//            session.saveOrUpdate(user);
+//            session.delete(user);
+            session.get(User.class, "ivan@gmail.com");
             session.getTransaction().commit();
         }
 

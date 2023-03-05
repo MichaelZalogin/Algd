@@ -4,6 +4,5 @@ CREATE TABLE IF NOT EXISTS users
     firstname  varchar(128),
     lastname   varchar(128),
     birth_date DATE,
-    role       varchar(128),
-    info       jsonb
+    role varchar(128)
 )
