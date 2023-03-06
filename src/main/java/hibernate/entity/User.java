@@ -6,7 +6,7 @@ import lombok.*;
 import javax.persistence.*;
 
 //@TypeDef(name = "ddd", typeClass = JsonBinaryType.class)
-@ToString
+@ToString(exclude = "company")
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
@@ -29,7 +29,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @ManyToOne
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
 //    @Type(type = "com.vladmihalcea.hibernate.type.json.JsonBinaryType")

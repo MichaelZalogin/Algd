@@ -29,8 +29,9 @@ public class HibernateRunner {
             try (Session session1 = sessionFactory.openSession()) {
                 session1.beginTransaction();
 
-                session1.save(company);
-                session1.save(user);
+                User user1 = session1.get(User.class, 2L);
+//                session1.save(company);
+//                session1.save(user);
 
                 session1.getTransaction().commit();
             }
