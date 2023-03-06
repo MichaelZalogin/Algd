@@ -15,18 +15,23 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users", schema = "public")
 public class User {
-    @Id
-    private String username;
 
-    @Embedded
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
-    @AttributeOverride(name = "firstname", column = @Column(name = "firstname"))
-    @AttributeOverride(name = "lastname", column = @Column(name = "lastname"))
     private PersonalInfo personalInfo;
+
+    @Column(unique = true)
+    private String username;
 
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    private Company company;
 //    @Type(type = "com.vladmihalcea.hibernate.type.json.JsonBinaryType")
 //    @Type(type = "jsonb")
 //    private String info;
