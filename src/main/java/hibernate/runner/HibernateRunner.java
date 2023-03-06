@@ -1,48 +1,45 @@
 package hibernate.runner;
 
-import hibernate.entity.Birthday;
-import hibernate.entity.Role;
 import hibernate.entity.User;
+import hibernate.util.HibernateUtil;
 import org.hibernate.Session;
-import org.hibernate.cfg.Configuration;
-
-import java.time.LocalDate;
 
 public class HibernateRunner {
     public static void main(String[] args) {
+        /** Transient по отношению к любой сессии */
+        User user = User.builder()
+                .username("ivan@gmail.com")
+                .lastname("Ivanov")
+                .firstname("Ivan")
+                .build();
 
-        Configuration configuration = new Configuration();
-        configuration.configure("hibernate.cfg.xml");
-        /** Парсинг имен полей */
-//        configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
-        /** Регистрация сущностей */
-//        configuration.addAnnotatedClass(User.class);
-        /** Конвентер User типов */
-//        configuration.addAttributeConverter(User class, true);
-        /** Регистрация User типа */
-//        configuration.registerTypeOverride(new JsonBinaryType());
-        try (var sessionFactory = configuration.buildSessionFactory()) {
-            Session session = sessionFactory.openSession();
+        try (var sessionFactory = HibernateUtil.buildSessionFactory()) {
 
-            session.beginTransaction();
+            try (Session session1 = sessionFactory.openSession()) {
+                session1.beginTransaction();
+                /** Persistent по отношению к session1 и Transient по
+                 * отношению к session2 */
+                session1.saveOrUpdate(user);
 
-            User user = User.builder()
-                    .username("ivan3@gmail.com")
-                    .firstname("Ivan")
-                    .lastname("Ivanov")
-                    .birthDate(new Birthday(LocalDate.of(2000, 1, 19)))
-                    .role(Role.ADMIN)
-                    .build();
-//            session.save(user);
-            /** Если юзера не будет, будет исключение */
-//            session.update(user);
-            /** Если юзера не будет, создаст юзера */
-//            session.saveOrUpdate(user);
-//            session.delete(user);
-            session.get(User.class, "ivan@gmail.com");
-            session.getTransaction().commit();
+                /** user в Detached состоянии по отношению к session1 и Transient по
+                 * отношению к session2 */
+                session1.getTransaction().commit();
+            }
+
+            try (Session session2 = sessionFactory.openSession()) {
+                session2.beginTransaction();
+
+                /** Сначала произойдет get() чтобы сущность была в состоянии
+                 * Persistent, а затем будет переход в состояние Removed.
+                 * Метод delete не переводит сущность из Transient в Persistent */
+//                session2.delete(user);
+
+                /** Синхронизирующие методы */
+                session2.refresh(user);
+                session2.merge(user);
+
+                session2.getTransaction().commit();
+            }
         }
-
-
     }
 }
