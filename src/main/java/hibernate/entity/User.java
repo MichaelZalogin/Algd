@@ -2,6 +2,7 @@ package hibernate.entity;
 
 import hibernate.converter.BirthdayConverter;
 import lombok.*;
+
 import javax.persistence.*;
 
 //@TypeDef(name = "ddd", typeClass = JsonBinaryType.class)
@@ -16,12 +17,12 @@ import javax.persistence.*;
 public class User {
     @Id
     private String username;
-    private String firstname;
-    private String lastname;
 
-    @Convert(converter = BirthdayConverter.class)
-    @Column(name = "birth_date")
-    private Birthday birthDate;
+    @Embedded
+    @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
+    @AttributeOverride(name = "firstname", column = @Column(name = "firstname"))
+    @AttributeOverride(name = "lastname", column = @Column(name = "lastname"))
+    private PersonalInfo personalInfo;
 
     @Enumerated(EnumType.STRING)
     private Role role;
